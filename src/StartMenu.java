@@ -4,6 +4,7 @@ import java.awt.Component;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
 import javax.imageio.ImageIO;
 import javax.swing.Box;
@@ -38,7 +39,7 @@ public class StartMenu implements Runnable {
         components.add(blackPanel, BorderLayout.EAST);
         final JLabel blackPiece = new JLabel();
         try {
-            Image blackImg = ImageIO.read(getClass().getResource("bp.png"));
+            Image blackImg = ImageIO.read(new File("resources/bpawn.png"));
             blackPiece.setIcon(new ImageIcon(blackImg));
             blackPanel.add(blackPiece);
         } catch (Exception e) {
@@ -56,7 +57,7 @@ public class StartMenu implements Runnable {
         final JLabel whitePiece = new JLabel();
         
         try {
-            Image whiteImg = ImageIO.read(getClass().getResource("wp.png"));
+            Image whiteImg = ImageIO.read(new File("resources/wpawn.png"));
             whitePiece.setIcon(new ImageIcon(whiteImg));
             whitePanel.add(whitePiece);
             startWindow.setIconImage(whiteImg);

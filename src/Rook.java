@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Rook extends Piece {
 
-    public Rook(int color, Square initSq, String img_file) {
-        super(color, initSq, img_file);
+    public Rook(int color, Square initSq) {
+        super(color, initSq);
     }
 
     @Override
@@ -29,5 +29,8 @@ public class Rook extends Piece {
         
         return legalMoves;
     }
-
+    @Override
+    public String getImgFile() {
+        return super.getImgFile() + "rook";
+    }
 }

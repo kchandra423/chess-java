@@ -6,8 +6,8 @@ import java.util.LinkedList;
 public class Pawn extends Piece {
     private boolean wasMoved;
     
-    public Pawn(int color, Square initSq, String img_file) {
-        super(color, initSq, img_file);
+    public Pawn(int color, Square initSq) {
+        super(color, initSq);
     }
     
     @Override
@@ -81,4 +81,9 @@ public class Pawn extends Piece {
         
         return legalMoves;
     }
+    @Override
+    public String getImgFile() {
+        return super.getImgFile() + "pawn";
+    }
+
 }
